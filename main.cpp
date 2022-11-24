@@ -6,7 +6,13 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    qInfo() << "Hello World";
+    bool lightSwitch = false;
+
+    qInfo() << "isOn: " << lightSwitch;
+
+    lightSwitch = true;
+
+    qInfo() << "isOn: " << lightSwitch;
 
     return a.exec();
 }
