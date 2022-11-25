@@ -7,16 +7,15 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
 
-    /* practice */
+    /* playground */
 
-    int age = 24;
+    enum Color {red, green, blue};
 
-    const int id = 007;
+    // Color::red = 199;
 
-    // id = 008;
+    Color myColor = Color::red;
 
-    qInfo() << "age: " << age;
-    qInfo() << "id: " << id;
+    qInfo() << "My Color: " << myColor;
 
 
 
