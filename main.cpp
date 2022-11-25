@@ -11,35 +11,14 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    int ages[4] = {9, 33, 24, 19};
-    qInfo() << ages[0];
-    qInfo() << ages[1];
-    qInfo() << ages[2];
-    qInfo() << ages[3];
+    int yearsPassed = 12;
+    int currentAge = 24;
 
-    qInfo() << ages;
-    qInfo() << *ages;
+    for (int i=0; i<yearsPassed; i++) {
+        currentAge++;
+    }
 
-    array<int, 5> cars;
-    cars[0] = 11;
-    cars[1] = 12;
-    cars[2] = 13;
-    cars[3] = 14;
-    cars[4] = 15;
-
-    qInfo() << cars[0];
-    qInfo() << cars[1];
-    qInfo() << cars[2];
-    qInfo() << cars[3];
-    qInfo() << cars[4];
-
-    // size of cars
-    qInfo() << "sizeof(cars):" << sizeof(cars);
-    qInfo() << "cars.size():" << cars.size();
-
-    // last array value of cars
-    qInfo() << "last value:" << cars[cars.size()-1];
-
+    qInfo() << "Age after" << yearsPassed << "years:" << currentAge;
 
     return a.exec();
 }
