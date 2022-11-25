@@ -2,6 +2,16 @@
 #include <QDebug>
 
 
+
+enum Colors {red, green, blue};
+
+struct Product {
+    int weight;
+    double value;
+    Colors color;
+};
+
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -9,13 +19,18 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    enum Color {red, green, blue};
+    Product laptop;
+    qInfo() << "sizeof(laptop): " << sizeof(laptop);
 
-    // Color::red = 199;
+    laptop.color = Colors::blue;
+    laptop.value = 420.87;
+    laptop.weight = 3;
 
-    Color myColor = Color::red;
+    qInfo() << "weight of laptop:" << laptop.weight << "kg";
+    qInfo() << "value of laptop:" << laptop.value << "usd";
+    qInfo() << "color of laptop:" << laptop.color;
+    // qInfo() << "laptop: " << laptop;
 
-    qInfo() << "My Color: " << myColor;
 
 
 
