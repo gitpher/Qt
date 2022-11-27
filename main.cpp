@@ -15,16 +15,7 @@ int main(int argc, char *argv[])
     int age(0);
     cin >> age;
 
-    if(age==0) qFatal("Not a valid age");
-
-    if(age<18) {
-        qInfo() << "You are not an adult";
-    }else if(age>18 && age<23){
-        qInfo() << "You are not really an adult";
-    }else{
-        qInfo() << "Welcome to the world of adults";
-    }
-
+    age > 0 && age < 100 ? qInfo("You entered a valid age") : qFatal("You did not enter a valid age");
 
     return a.exec();
 }
