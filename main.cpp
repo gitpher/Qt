@@ -13,11 +13,16 @@ int main(int argc, char *argv[])
     /* playground */
 
     int age(0);
-
-    qInfo() << "Plese enter your age:";
+    qInfo() << "Enter your age";
     cin >> age;
 
-    qInfo() << "you are a(n) " << (age > 18 ? "adult" : "kid");
+    qInfo() << "You are" << age << "years old";
+
+    qInfo() << "qInfo()";
+    qDebug() << "qDebug()";
+    qCritical() << "qCritical()";
+    qFatal("qFatal");
+
 
 
     return a.exec();
