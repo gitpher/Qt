@@ -11,20 +11,21 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    int value(15); // c++ way of declaring & assigning/initializing variable
-    qInfo() << "value: " << value;
+    int x(10);
+    int y(15);
 
-    value += 5;
-    qInfo() << "value: " << value;
+    qInfo() << "x == y" << (x == y);
+    qInfo() << "x < y" << (x < y);
+    qInfo() << "x > y" << (x > y);
+    qInfo() << "x != y" << (x != y);
 
-    value -= 10;
-    qInfo() << "value: " << value;
+    bool t(true);
+    bool f(false);
 
-    value *= 2;
-    qInfo() << "value: " << value;
-
-    value /= 5;
-    qInfo() << "value: " << value;
+    qInfo() << "t == f" << (t == f);
+    qInfo() << "t != f" << (t != f);
+    qInfo() << "t < f" << (t < f);
+    qInfo() << "t > f" << (t > f);
 
     return a.exec();
 }
