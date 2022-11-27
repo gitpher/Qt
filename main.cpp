@@ -12,16 +12,12 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    cout << "Hello Qt!" << endl;
+    int age(0);
 
-    int age(24);
-    cout <<  age;
-    cout << endl;
-    cout << flush;
+    qInfo() << "Plese enter your age:";
+    cin >> age;
 
-    qInfo() << age;
-
-    cout << age;
+    qInfo() << "you are a(n) " << (age > 18 ? "adult" : "kid");
 
 
     return a.exec();
