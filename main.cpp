@@ -11,16 +11,16 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    bool x(true);
-    bool y(false);
+    const int dog_years = 16;
+    const int cat_years = 15;
+    const int fish_years = 8;
 
-    qInfo() << "x && y" << (x && y);
-    qInfo() << "x || y" << (x || y);
+    int my_age = 24;
 
-    int n(10);
-
-    qInfo() << "!(n < 11 && n > 2)" << !(n < 11 && n > 2);
-    qInfo() << "(n < 33 || n < 3)" << (n < 33 || n < 3);
+    qInfo() << "my age" << my_age;
+    qInfo() << "dog years:" << my_age * dog_years;
+    qInfo() << "cat years:" << my_age * cat_years;
+    qInfo() << "fish years:" << my_age * fish_years;
 
 
 
