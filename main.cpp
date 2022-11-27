@@ -12,31 +12,22 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    int age(0);
-    cin >> age;
+    int start(80);
+    int max(100);
 
-    switch(age) {
-    case 0:
-        qFatal("You did not enter a valid age");
-        break;
-    case 16:
-        qInfo("You can drive");
-        break;
-    case 18:
-        qInfo("You can vote");
-        break;
-    case 21:
-        qInfo("You can drink");
-        break;
-    case 60:
-        qInfo("You can retire");
-        break;
-    default:
-        qInfo("default");
-        break;
+    int i(start);
+    while(i<max) {
+        qInfo() << "while i:" << i;
+        i++;
     }
 
+    qInfo("");
 
+    i = start;
+    do {
+        qInfo() << "do while i:" << i;
+        i++;
+    } while(i<max);
 
 
     return a.exec();
