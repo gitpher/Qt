@@ -10,15 +10,16 @@ int main(int argc, char *argv[])
 
 
     /* playground */
+    int numberOfBears(10);
+    int myFavoriteNumber(5);
+    numberOfBears = myFavoriteNumber;
 
-    int yearsPassed = 12;
-    int currentAge = 24;
+    qInfo() << numberOfBears;
 
-    for (int i=0; i<yearsPassed; i++) {
-        currentAge++;
-    }
 
-    qInfo() << "Age after" << yearsPassed << "years:" << currentAge;
+
+
+
 
     return a.exec();
 }
