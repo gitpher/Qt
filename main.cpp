@@ -11,21 +11,18 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    int x(10);
-    int y(15);
+    bool x(true);
+    bool y(false);
 
-    qInfo() << "x == y" << (x == y);
-    qInfo() << "x < y" << (x < y);
-    qInfo() << "x > y" << (x > y);
-    qInfo() << "x != y" << (x != y);
+    qInfo() << "x && y" << (x && y);
+    qInfo() << "x || y" << (x || y);
 
-    bool t(true);
-    bool f(false);
+    int n(10);
 
-    qInfo() << "t == f" << (t == f);
-    qInfo() << "t != f" << (t != f);
-    qInfo() << "t < f" << (t < f);
-    qInfo() << "t > f" << (t > f);
+    qInfo() << "!(n < 11 && n > 2)" << !(n < 11 && n > 2);
+    qInfo() << "(n < 33 || n < 3)" << (n < 33 || n < 3);
+
+
 
     return a.exec();
 }
