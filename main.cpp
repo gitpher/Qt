@@ -15,7 +15,29 @@ int main(int argc, char *argv[])
     int age(0);
     cin >> age;
 
-    age > 0 && age < 100 ? qInfo("You entered a valid age") : qFatal("You did not enter a valid age");
+    switch(age) {
+    case 0:
+        qFatal("You did not enter a valid age");
+        break;
+    case 16:
+        qInfo("You can drive");
+        break;
+    case 18:
+        qInfo("You can vote");
+        break;
+    case 21:
+        qInfo("You can drink");
+        break;
+    case 60:
+        qInfo("You can retire");
+        break;
+    default:
+        qInfo("default");
+        break;
+    }
+
+
+
 
     return a.exec();
 }
