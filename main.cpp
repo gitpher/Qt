@@ -12,7 +12,16 @@ int main(int argc, char *argv[])
 
     /* playground */
 
+    cout << "Hello Qt!" << endl;
 
+    int age(24);
+    cout <<  age;
+    cout << endl;
+    cout << flush;
+
+    qInfo() << age;
+
+    cout << age;
 
 
     return a.exec();
