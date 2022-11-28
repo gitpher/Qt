@@ -12,26 +12,14 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    int max(10);
-    qInfo() << "Please enter max";
-    cin >> max;
+    int age(0);
+    qInfo() << "Please enter your age:";
+    cin >> age;
 
-    if(max<=0) qFatal("Please enter a valid number");
+    if(age<1||age>120) qFatal("please enter a valid age");
 
-    for(int i=0; i<max; i++)  {
-        qInfo() << "i:" << i;
-    }
-    qInfo("");
+    qInfo() << "Your age is" << age;
 
-    array<int, 4> ages = {24, 25, 29, 33};
-    for(int age: ages) {
-        qInfo() << age;
-    }
-    qInfo("");
-
-    for(int i=0; i<ages.size(); i++) {
-        qInfo() << ages[i];
-    }
 
 
     return a.exec();
