@@ -12,15 +12,21 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    int age(0);
-    qInfo() << "Please enter your age:";
-    cin >> age;
+    int max(5);
+    QString task = "Plz take out the trash";
+    for (int i=1; i<50; i++) {
+        qInfo() << "Wife:" << task;
+        qWarning() << "Wife: I have asked" << i << "times!";
 
-    if(age<1||age>120) qFatal("please enter a valid age");
+        if (i>=max) {
+            qInfo() << "Husband: ok, ok, I'm going";
+            break;
+        }
 
-    qInfo() << "Your age is" << age;
+        qInfo() << "Husband: I will";
+    }
 
-
+    qInfo() << "Done";
 
     return a.exec();
 }
