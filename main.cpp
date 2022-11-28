@@ -6,9 +6,8 @@
 #include <iostream>
 using namespace std;
 
-
-void test() {
-    qInfo() << "Hello from test()";
+int multiply(int x, int y) {
+    return x * y;
 }
 
 
@@ -18,7 +17,8 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    test();
+    qInfo() << multiply(2,44);
+
 
     return a.exec();
 }
