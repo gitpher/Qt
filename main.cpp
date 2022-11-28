@@ -6,22 +6,33 @@
 #include <iostream>
 using namespace std;
 
-void sayHello() {
-    qInfo("Hi");
+void callByValue(int x) {
+    x *= 50;
+    qInfo() << x;
 }
 
-void sayHello(QString name) {
-    qInfo() << "Hi" << name;
+void callByReference(int &y) {
+    y *= 50;
+    qInfo() << y;
 }
-
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
     /* playground */
-    sayHello();
-    sayHello("Jinkee");
+    int x(2);
+    int y(2);
+
+    qInfo() << "MAIN X:" << x;
+    callByValue(x);
+    qInfo() << "MAIN X:" << x;
+
+    qInfo("");
+
+    qInfo() << "MAIN Y:" << y;
+    callByReference(y);
+    qInfo() << "MAIN Y:" << y;
 
 
     return a.exec();
