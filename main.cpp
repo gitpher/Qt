@@ -12,22 +12,26 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    int start(80);
-    int max(100);
+    int max(10);
+    qInfo() << "Please enter max";
+    cin >> max;
 
-    int i(start);
-    while(i<max) {
-        qInfo() << "while i:" << i;
-        i++;
+    if(max<=0) qFatal("Please enter a valid number");
+
+    for(int i=0; i<max; i++)  {
+        qInfo() << "i:" << i;
     }
-
     qInfo("");
 
-    i = start;
-    do {
-        qInfo() << "do while i:" << i;
-        i++;
-    } while(i<max);
+    array<int, 4> ages = {24, 25, 29, 33};
+    for(int age: ages) {
+        qInfo() << age;
+    }
+    qInfo("");
+
+    for(int i=0; i<ages.size(); i++) {
+        qInfo() << ages[i];
+    }
 
 
     return a.exec();
