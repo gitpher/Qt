@@ -3,5 +3,12 @@
 Animal::Animal(QObject *parent)
     : QObject{parent}
 {
-    qDebug() << this << "constructed";
+    qInfo() << this << "constructed";
+
+
+}
+
+void Animal::speak(QString message)
+{
+    qInfo() << this << message;
 }

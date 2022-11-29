@@ -7,10 +7,13 @@
 class Animal : public QObject
 {
     Q_OBJECT // macro for adding long lines of codes
+
+    // private area
 public:
     explicit Animal(QObject *parent = nullptr); // it is being defined somewhere else
+    void speak(QString message);
 
-signals:
+signals: // communication between objects
 
 };
 

@@ -18,6 +18,9 @@ int main(int argc, char *argv[])
     Animal cat;
     Animal fish;
 
+    dog.speak("bark");
+    cat.speak("meow");
+    fish.speak("...");
 
 
 
