@@ -6,33 +6,26 @@
 #include <iostream>
 using namespace std;
 
-void callByValue(int x) {
-    x *= 50;
-    qInfo() << x;
-}
+struct Laptop {
+    int weight;
 
-void callByReference(int &y) {
-    y *= 50;
-    qInfo() << y;
-}
+    double asKilograms() {
+        return weight * 0.453;
+    }
+
+};
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
     /* playground */
-    int x(2);
-    int y(2);
 
-    qInfo() << "MAIN X:" << x;
-    callByValue(x);
-    qInfo() << "MAIN X:" << x;
+    Laptop notebook;
+    notebook.weight = 5;
+    qInfo() << "pounds:" << notebook.weight;
+    qInfo() << "kilograms:" << notebook.asKilograms();
 
-    qInfo("");
-
-    qInfo() << "MAIN Y:" << y;
-    callByReference(y);
-    qInfo() << "MAIN Y:" << y;
 
 
     return a.exec();
