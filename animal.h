@@ -10,8 +10,15 @@ class Animal : public QObject
 
     // private area
 public:
+    // Constructor
     explicit Animal(QObject *parent = nullptr); // it is being defined somewhere else
-    void speak(QString message);
+    // Deconstructor
+    ~Animal();
+
+    // Functions
+    bool isAlive() {
+        return true;
+    };
 
 signals: // communication between objects
 

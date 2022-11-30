@@ -8,7 +8,9 @@ Animal::Animal(QObject *parent)
 
 }
 
-void Animal::speak(QString message)
+Animal::~Animal()
 {
-    qInfo() << this << message;
+    qInfo() << this << "deconstructed";
 }
+
+

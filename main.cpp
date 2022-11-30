@@ -1,28 +1,14 @@
 #include <QCoreApplication>
 #include <QDebug>
 
-#include "animal.h"
-#include "laptop.h"
+#include "cat.h"
+#include "dog.h"
+
 
 
 using namespace std;
 
-void test(Laptop &machine) {
-    machine.test();
-}
 
-void makeLaptops() {
-    // stack is managing these objects
-    Laptop mine(nullptr, "my laptop");
-    Laptop yours(nullptr, "your laptop");
-
-    mine.weight = 3;
-    yours.weight = 5;
-
-    test(mine);
-    test(yours);
-    // these objects will be deleted from stack
-}
 
 int main(int argc, char *argv[])
 {
@@ -30,7 +16,16 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    makeLaptops();
+    Cat cat;
+    Dog dog;
+    cat.meow();
+    dog.bark();
+    cat.hasMilk();
+    dog.hasMilk();
+    cat.isAlive();
+    dog.isAlive();
+
+
 
 
     return a.exec();

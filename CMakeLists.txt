@@ -20,6 +20,14 @@ add_executable(firstproject
   animal.cpp
   laptop.h
   laptop.cpp
+  mammal.h
+  mammal.cpp
+  dog.h
+  dog.cpp
+  cat.h
+  cat.cpp
+  monster.h
+  monster.cpp
 )
 target_link_libraries(firstproject Qt${QT_VERSION_MAJOR}::Core)
 
