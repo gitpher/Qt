@@ -28,6 +28,11 @@ add_executable(firstproject
   cat.cpp
   monster.h
   monster.cpp
+  Toaster.h
+  Freezer.h
+  Microwave.h
+  appliance.h
+  appliance.cpp
 )
 target_link_libraries(firstproject Qt${QT_VERSION_MAJOR}::Core)
 

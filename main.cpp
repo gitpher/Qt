@@ -1,8 +1,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 
-#include "cat.h"
-#include "dog.h"
+#include "appliance.h"
 
 
 
@@ -16,16 +15,11 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    Cat cat;
-    Dog dog;
-    cat.meow();
-    dog.bark();
-    cat.hasMilk();
-    dog.hasMilk();
-    cat.isAlive();
-    dog.isAlive();
 
-
+    Appliance appliance;
+    qInfo() << "cook:" << appliance.cook();
+    qInfo() << "freeze:" << appliance.freeze();
+    qInfo() << "grill:" << appliance.grill();
 
 
     return a.exec();
