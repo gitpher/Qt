@@ -18,6 +18,8 @@ add_executable(firstproject
   main.cpp
   animal.h
   animal.cpp
+  laptop.h
+  laptop.cpp
 )
 target_link_libraries(firstproject Qt${QT_VERSION_MAJOR}::Core)
 
