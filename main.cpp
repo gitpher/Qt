@@ -1,23 +1,15 @@
 #include <QCoreApplication>
 #include <QDebug>
 
-#include "cat.h"
+
 
 using namespace std;
 
-// fail
-void speak(Cat cat) {
-    cat.speak();
-}
 
-void speak_ptr(Cat *cat) {
-    cat->speak();
+void test(int number) {
+    number = 50;
+    qInfo() << "(2) number" << &number << "=" << number;
 }
-
-void speak_ref(Cat &cat) {
-    cat.speak();
-}
-
 
 int main(int argc, char *argv[])
 {
@@ -25,11 +17,23 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    Cat cat;
-    // speak(cat);
-    speak_ptr(&cat);
-    speak_ref(cat);
+    int number = 75;
 
+    qInfo() << "(1) number" << &number << "=" << number;
+
+    test(number);
+
+    qInfo() << "(3) number" << &number << "=" << number;
+
+    bool ok = true;
+    if (ok)
+    {
+        qInfo() << "(4) number" << &number << "=" << number;
+        int number = 100; // <= pain in the ass
+        qInfo() << "(5) number" << &number << "=" << number;
+    }
+
+    qInfo() << "(6) number" << &number << "=" << number;
 
     return a.exec();
 }
