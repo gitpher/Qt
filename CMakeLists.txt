@@ -33,6 +33,8 @@ add_executable(firstproject
   Microwave.h
   appliance.h
   appliance.cpp
+  lion.h
+  lion.cpp
 )
 target_link_libraries(firstproject Qt${QT_VERSION_MAJOR}::Core)
 

@@ -12,9 +12,8 @@ class Cat : public Mammal
 public:
     explicit Cat(QObject *parent = nullptr);
 
-    void meow() {
-        qInfo() << "meow";
-    }
+    void speak();
+
 signals:
 
 };

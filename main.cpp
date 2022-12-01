@@ -1,7 +1,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 
-#include "appliance.h"
+#include "lion.h"
 
 
 
@@ -14,12 +14,10 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     /* playground */
+    Lion leo;
+    leo.speak();
 
 
-    Appliance appliance;
-    qInfo() << "cook:" << appliance.cook();
-    qInfo() << "freeze:" << appliance.freeze();
-    qInfo() << "grill:" << appliance.grill();
 
 
     return a.exec();

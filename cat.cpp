@@ -5,3 +5,9 @@ Cat::Cat(QObject *parent)
 {
     qInfo() << this << "constructed";
 }
+
+void Cat::speak()
+{
+    qInfo() << "meow";
+}
+
