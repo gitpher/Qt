@@ -1,39 +1,21 @@
 #include <QCoreApplication>
 #include <QDebug>
-
-
+#include "thing.h"
 
 using namespace std;
 
 
-void test(int number) {
-    number = 50;
-    qInfo() << "(2) number" << &number << "=" << number;
-}
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
     /* playground */
+    Thing thing(nullptr, "rock");
+    thing.exist(10, 21);
 
-    int number = 75;
-
-    qInfo() << "(1) number" << &number << "=" << number;
-
-    test(number);
-
-    qInfo() << "(3) number" << &number << "=" << number;
-
-    bool ok = true;
-    if (ok)
-    {
-        qInfo() << "(4) number" << &number << "=" << number;
-        int number = 100; // <= pain in the ass
-        qInfo() << "(5) number" << &number << "=" << number;
-    }
-
-    qInfo() << "(6) number" << &number << "=" << number;
+    thing.name = "paper";
+    qInfo() << thing.name;
 
     return a.exec();
 }

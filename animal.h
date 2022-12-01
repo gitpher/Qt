@@ -15,6 +15,8 @@ public:
     // Deconstructor
     ~Animal();
 
+    QString name;
+
     // Functions
     bool isAlive() {
         return true;
