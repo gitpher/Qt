@@ -37,6 +37,8 @@ add_executable(firstproject
   lion.cpp
   test.h
   test.cpp
+  agecalc.h
+  agecalc.cpp
 )
 target_link_libraries(firstproject Qt${QT_VERSION_MAJOR}::Core)
 
