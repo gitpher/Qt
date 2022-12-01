@@ -1,17 +1,23 @@
 #include <QCoreApplication>
 #include <QDebug>
 
-#include "agecalc.h"
+#include "cat.h"
 
 using namespace std;
 
-
-void print(AgeCalc &calc) {
-    qInfo() << "name:" << calc.name();
-    qInfo() << "- human years:" << calc.humanYears();
-    qInfo() << "- cat years:" << calc.catYears();
-    qInfo() << "- dog years:" << calc.dogYears();
+// fail
+void speak(Cat cat) {
+    cat.speak();
 }
+
+void speak_ptr(Cat *cat) {
+    cat->speak();
+}
+
+void speak_ref(Cat &cat) {
+    cat.speak();
+}
+
 
 int main(int argc, char *argv[])
 {
@@ -19,17 +25,10 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    AgeCalc junwoo;
-    AgeCalc jinkee;
-
-    junwoo.setName("Junwoo");
-    junwoo.setAge(24);
-
-    jinkee.setName("Jinkee");
-    jinkee.setAge(54);
-
-    print(junwoo);
-    print(jinkee);
+    Cat cat;
+    // speak(cat);
+    speak_ptr(&cat);
+    speak_ref(cat);
 
 
     return a.exec();
