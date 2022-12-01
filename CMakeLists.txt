@@ -35,6 +35,8 @@ add_executable(firstproject
   appliance.cpp
   lion.h
   lion.cpp
+  test.h
+  test.cpp
 )
 target_link_libraries(firstproject Qt${QT_VERSION_MAJOR}::Core)
 
