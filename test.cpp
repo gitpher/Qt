@@ -5,3 +5,17 @@ Test::Test(QObject *parent)
 {
 
 }
+
+void Test::doStuff()
+{
+    qInfo() << this << "doing stuff";
+}
+
+void Test::doOtherStuff()
+{
+    // "this" does not exist
+    // qInfo() << this << "doing other stuff";
+    // doStuff(); // No instance can not call the other function
+
+    qInfo() << "do other stuff";
+}

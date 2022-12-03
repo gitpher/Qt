@@ -3,19 +3,10 @@
 using namespace std;
 /*-------------------------------*/
 
-#include "animal.h"
+#include "test.h"
 
 
-// initialization is necessary
-int Animal::count = 0;
 
-
-void test() {
-    Animal dog;
-    Animal cat;
-    Animal fish;
-    qInfo() << Animal::count;
-}
 
 
 
@@ -24,8 +15,14 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     /* playground */
-    test();
-    qInfo() << Animal::count;
+
+//    Test test;
+//    test.doStuff();
+//    test.doOtherStuff();
+
+
+    // can run code without making an instance of a class (!important)
+    Test::doOtherStuff();
 
 
 

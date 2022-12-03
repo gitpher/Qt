@@ -16,7 +16,7 @@ public:
     ~Animal();
 
     QString name;
-    static int count;
+
 
     // Functions
     bool isAlive() {
