@@ -3,9 +3,15 @@
 using namespace std;
 /*-------------------------------*/
 
-#include "test.h"
+int addTen(int n)
+{
+    return n + 10;
+}
 
-
+int humanYearsToDogYears(int humanYears)
+{
+    return humanYears * 8;
+}
 
 
 
@@ -16,15 +22,8 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-//    Test test;
-//    test.doStuff();
-//    test.doOtherStuff();
-
-
-    // can run code without making an instance of a class (!important)
-    Test::doOtherStuff();
-
-
+    int humanYear(24);
+    qInfo() << humanYearsToDogYears(addTen(humanYear));
 
     return a.exec();
 }
