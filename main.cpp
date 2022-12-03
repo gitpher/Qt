@@ -1,9 +1,15 @@
 #include <QCoreApplication>
 #include <QDebug>
-#include "thing.h"
+
 
 using namespace std;
 
+QString name = "Albert";
+
+void testing()
+{
+    qInfo() << name;
+}
 
 
 int main(int argc, char *argv[])
@@ -11,11 +17,21 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     /* playground */
-    Thing thing(nullptr, "rock");
-    thing.exist(10, 21);
+    name = "Junwoo";
+    qInfo() << name;
 
-    thing.name = "paper";
-    qInfo() << thing.name;
+    bool test = true;
+    if (test)
+    {
+        QString name = "Junior";
+        qInfo() << name;
+        qInfo() << ::name;
+    }
+
+    qInfo() << name;
+    testing();
+
+
 
     return a.exec();
 }
