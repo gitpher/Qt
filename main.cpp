@@ -1,15 +1,22 @@
 #include <QCoreApplication>
 #include <QDebug>
-
-
 using namespace std;
+/*-------------------------------*/
 
-QString name = "Albert";
+#include "animal.h"
 
-void testing()
-{
-    qInfo() << name;
+
+// initialization is necessary
+int Animal::count = 0;
+
+
+void test() {
+    Animal dog;
+    Animal cat;
+    Animal fish;
+    qInfo() << Animal::count;
 }
+
 
 
 int main(int argc, char *argv[])
@@ -17,19 +24,8 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     /* playground */
-    name = "Junwoo";
-    qInfo() << name;
-
-    bool test = true;
-    if (test)
-    {
-        QString name = "Junior";
-        qInfo() << name;
-        qInfo() << ::name;
-    }
-
-    qInfo() << name;
-    testing();
+    test();
+    qInfo() << Animal::count;
 
 
 
