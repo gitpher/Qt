@@ -3,17 +3,20 @@
 using namespace std;
 /*-------------------------------*/
 
-int addTen(int n)
+void testCpy(QString value)
 {
-    return n + 10;
+    qInfo() << "test" << &value << "size:" << value.length();
 }
 
-int humanYearsToDogYears(int humanYears)
+void testRef(QString &value)
 {
-    return humanYears * 8;
+    qInfo() << "testRef" << &value << "size:" << value.length();
 }
 
-
+void testPtr(QString *value)
+{
+    qInfo() << "testPtr" << value << "size:" << value->length();
+}
 
 
 int main(int argc, char *argv[])
@@ -22,8 +25,11 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    int humanYear(24);
-    qInfo() << humanYearsToDogYears(addTen(humanYear));
+    QString name = "Junwoo";
+    qInfo() << &name << "size:" << name.length();
+    testCpy(name);
+    testRef(name);
+    testPtr(&name);
 
     return a.exec();
 }
