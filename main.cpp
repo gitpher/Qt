@@ -3,20 +3,14 @@
 using namespace std;
 /*-------------------------------*/
 
-void testCpy(QString value)
+void display(QString *value)
 {
-    qInfo() << "test" << &value << "size:" << value.length();
+    qInfo() << "ptr:" << value;
+    qInfo() << "adr of ptr:" << &value;
+    qInfo() << "val:" << *value;
 }
 
-void testRef(QString &value)
-{
-    qInfo() << "testRef" << &value << "size:" << value.length();
-}
 
-void testPtr(QString *value)
-{
-    qInfo() << "testPtr" << value << "size:" << value->length();
-}
 
 
 int main(int argc, char *argv[])
@@ -25,11 +19,15 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    QString name = "Junwoo";
-    qInfo() << &name << "size:" << name.length();
-    testCpy(name);
-    testRef(name);
-    testPtr(&name);
+    QString *description = new QString("Hello World");
+
+    qInfo() << description;
+
+    display(description);
+
+    delete description;
+
+
 
     return a.exec();
 }
