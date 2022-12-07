@@ -3,9 +3,22 @@
 using namespace std;
 /*-------------------------------*/
 
-#include "parent.h"
-#include "child.h"
+//QObject getObject()
+//{
+//    QObject o;
+//    return o;
+//}
 
+QObject* getObject()
+{
+    QObject *o = new QObject();
+    return o;
+}
+
+void testPtr(QObject *object)
+{
+    qInfo() << object << Q_FUNC_INFO;
+}
 
 
 int main(int argc, char *argv[])
@@ -13,11 +26,10 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     /* playground */
-    Child *c = new Child(&a);
-    c->p = new Parent(c);
-    delete c;
+    QObject *p = getObject();
+    testPtr(p);
 
-
+    delete p;
 
     return a.exec();
 }
