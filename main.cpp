@@ -3,16 +3,8 @@
 using namespace std;
 /*-------------------------------*/
 
-#include "test.h"
-
-void wow()
-{
-    // Automatic memory management
-    std::unique_ptr<Test> t(new Test()); // Created this in memory
-    t->doStuff();
-
-    // pointer automatically deleted (without delete)
-}
+#include "parent.h"
+#include "child.h"
 
 
 
@@ -21,10 +13,10 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     /* playground */
+    Child *c = new Child(&a);
+    c->p = new Parent(c);
+    delete c;
 
-    qInfo() << "Starting";
-    wow();
-    qInfo() << "Finished";
 
 
     return a.exec();
