@@ -3,7 +3,12 @@
 Test::Test(QObject *parent)
     : QObject{parent}
 {
+    qInfo() << this << "constructor";
+}
 
+Test::~Test()
+{
+    qInfo() << this << "deconstructor";
 }
 
 void Test::doStuff()

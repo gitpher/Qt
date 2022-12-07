@@ -9,6 +9,8 @@ class Test : public QObject
     Q_OBJECT
 public:
     explicit Test(QObject *parent = nullptr);
+    // Deconstructor
+    ~Test();
 
     void doStuff();
     static void doOtherStuff();

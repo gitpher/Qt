@@ -3,13 +3,16 @@
 using namespace std;
 /*-------------------------------*/
 
-void display(QString *value)
-{
-    qInfo() << "ptr:" << value;
-    qInfo() << "adr of ptr:" << &value;
-    qInfo() << "val:" << *value;
-}
+#include "test.h"
 
+void wow()
+{
+    // Automatic memory management
+    std::unique_ptr<Test> t(new Test()); // Created this in memory
+    t->doStuff();
+
+    // pointer automatically deleted (without delete)
+}
 
 
 
@@ -19,14 +22,9 @@ int main(int argc, char *argv[])
 
     /* playground */
 
-    QString *description = new QString("Hello World");
-
-    qInfo() << description;
-
-    display(description);
-
-    delete description;
-
+    qInfo() << "Starting";
+    wow();
+    qInfo() << "Finished";
 
 
     return a.exec();
