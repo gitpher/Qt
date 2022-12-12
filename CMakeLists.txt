@@ -45,6 +45,10 @@ add_executable(firstproject
   parent.cpp
   child.h
   child.cpp
+  source.h
+  source.cpp
+  destination.h
+  destination.cpp
 )
 target_link_libraries(firstproject Qt${QT_VERSION_MAJOR}::Core)
 

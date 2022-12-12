@@ -3,22 +3,10 @@
 using namespace std;
 /*-------------------------------*/
 
-//QObject getObject()
-//{
-//    QObject o;
-//    return o;
-//}
+#include "source.h"
+#include "destination.h"
 
-QObject* getObject()
-{
-    QObject *o = new QObject();
-    return o;
-}
 
-void testPtr(QObject *object)
-{
-    qInfo() << object << Q_FUNC_INFO;
-}
 
 
 int main(int argc, char *argv[])
@@ -26,10 +14,14 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     /* playground */
-    QObject *p = getObject();
-    testPtr(p);
+    Source src;
+    Destination dst;
 
-    delete p;
+    QObject::connect(&src, &Source::mySignal, &dst, &Destination::mySlot);
+
+    src.test();
+
+    dst.mySlot("Hi!");
 
     return a.exec();
 }
