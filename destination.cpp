@@ -6,7 +6,4 @@ Destination::Destination(QObject *parent)
 
 }
 
-void Destination::mySignal(QString message)
-{
-    qInfo() << message;
-}
+
